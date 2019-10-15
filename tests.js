@@ -9,7 +9,13 @@ QUnit.test("Word Filter",
     );
     assert.strictEqual(
       cleanUp("I hate these flipping rats of the seas"),
-      "I hate therse seas"
+      "I hate these seas",
+      '"flipping", "rats", "of" and "the" should all be removed'
+    );
+    assert.strictEqual(
+      cleanUp("Oh rats"),
+      "Oh",
+      '"Oh rats" should become "Oh"'
     );
   }
 );
@@ -21,13 +27,13 @@ QUnit.test("Word Filter",
 QUnit.test("Chain Compressor",
   function (assert) {
     assert.strictEqual(
-      typeof cleanUp,
+      typeof compressor,
       "function",
       "Write a function called compressor."
     );
     assert.strictEqual(
-      cleanUp("I hate these flipping rats of the seas"),
-      "I hate therse seas"
+      compressor("the elephant tacitly yoyoed"),
+      "the lphant acily ooed"
     );
   }
 );
