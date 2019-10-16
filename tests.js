@@ -106,6 +106,47 @@ QUnit.test("Count the Space",
 
 
 
+
+// Write a function called `halver` that accepts
+// an array or a string (the function must determine
+// what is received) and returns an array or a string
+// where every other item(or character) is removed.
+// The first item / character will always stay.
+QUnit.test("Halver",
+  function (assert) {
+    assert.strictEqual(
+      typeof halver,
+      "function",
+      "Write a function called spaceCounter."
+    );
+    assert.strictEqual(
+      halver("hello"),
+      `hlo`,
+      "A halved string 'hello' should be 'hlo' (because the first character always stays)."
+    );
+    assert.deepEqual(
+      halver(["h", "e", "l", "l", "o"]),
+      ["h", "l", "o"],
+      "A halved array hello should return a 3 character array contianing h, l and o)."
+    );
+    assert.deepEqual(
+      halver(["jacek", "really", "loves", "eating", "pets"]),
+      ["jacek", "loves", "pets"],
+      "really and eating should be removed"
+    );
+  }
+);
+
+
+
+
+
+
+
+
+
+
+
 // 5. Capital Nth
 
 // Write a
@@ -119,36 +160,6 @@ QUnit.test("Count the Space",
 // returns
 
 //   `jacek Is prettier Than matt`
-
-
-// 6. Halver
-
-// Write a
-// function called `halver`
-// that accepts an array or a string(the
-//   function must determine what is received) and returns an array or a string where every other item(or character) is removed– the first item / character will stay.
-
-// `halver("hello")`
-
-// returns
-
-//   `hlo`
-
-// and
-
-//   `halver(["h", "e", "l", "l", "o"])`
-
-// returns
-
-//   `["h", "l", "o"]`
-
-// and
-
-//   `halver(["jacek", "really", "loves", "eating", "pets"])`
-
-// returns
-
-//   `["jacek", "loves", "pets"]`
 
 
 // 7. Character Filter

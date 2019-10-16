@@ -69,3 +69,26 @@ function flipper(num) {
 function spaceCounter(sentence) {
   return sentence.split(' ').length-1;
 }
+
+
+
+function halver(candidate) {
+  let work;
+  let result = [];
+  if (typeof candidate === 'string') {
+    work = candidate.split('');
+  } else {
+    work = candidate;
+  }
+
+  for (let i=0; i<work.length; i = i+2) {
+    result.push(work[i]);
+  }
+
+  if (typeof candidate === 'string') {
+    return result.join('');
+  } else {
+    return result;
+  }
+
+}
