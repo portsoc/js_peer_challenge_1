@@ -1,4 +1,10 @@
 // 1. Word Filter
+// Write a function called cleanUp that, given a long
+// string, breaks it up at spaces and removes occurrences
+// of the following words:
+// "and", "the", "of", "it", "flippin", "rats";
+// e.g. "I hate these flipping rats of the seas"
+// becomes "I hate these seas"
 
 function cleanUp(str) {
   const words = str.split(' ');
@@ -23,6 +29,10 @@ function isNotBanned(word) {
 
 
 // 2. Trim-N
+// write a function called trimmer that accepts a
+// string and a value n, and returns a string that
+// has the given string with n characters removed
+// from the end of it
 function trimmer(str, n) {
   const chars = str.split('');
   const newLen = str.length - n;
@@ -35,6 +45,10 @@ function trimmer(str, n) {
 
 
 // 3. Flipper
+// write a function called flipper that accepts a
+// number and returns the number that has the same
+// digits but in reverse (the function needs to
+// treat the input number as a string)
 function flipper(num) {
   const str = num.toString();
   const brk = str.split('');
@@ -45,6 +59,9 @@ function flipper(num) {
 
 
 // 4. Count the Spaces
+// write a function called spaceCounter that
+// accepts a string and returns the count of
+// spaces in that string
 function spaceCounter(sentence) {
   let count = 0;
   for (const ch of sentence) {
@@ -55,6 +72,10 @@ function spaceCounter(sentence) {
 
 
 // 5. Capital Nth
+// write a function called capitalizer that accepts
+// a long string (like cleanUp) and a number n;
+// it returns a long string where every nth word
+// has its first character upper-cased
 function capitalizer(str, n) {
   const words = str.split(' ');
   for (let i=0; i<=words.length; i+=1) {
@@ -73,6 +94,11 @@ function capitalizeWord(word) {
 
 
 // 6. Halver
+// write a function called halver that accepts an
+// array or a string (the function must determine
+// what it received) and returns an array or a
+// string where every other item (or character) is
+// removed – the first item/character will stay
 function halver(input) {
   let work;
   let result = [];
@@ -95,6 +121,10 @@ function halver(input) {
 
 
 // 7. Character Filter
+// write a function called charFilter that accepts
+// an array of strings and a character, and returns
+// an array of strings with all occurrences of
+// the given character removed
 function charFilter(arr, charToRemove) {
   const retval = [];
   for (const str of arr) {
@@ -111,6 +141,12 @@ function charFilter(arr, charToRemove) {
 
 
 // 8. Pig Latin
+// write a function called toPigLatin that accepts
+// a long string and turns every word into its
+// pig-latin version – it removes the beginning up
+// to the first consonant and appends it at the end
+// together with "ay", e.g. "pig latin ahoy" becomes
+// "igpay atinlay oyahey"
 function toPigLatin(str) {
   const words = str.split(' ');
   for (let i=0; i<words.length; i+=1) {
@@ -146,6 +182,10 @@ function isVowel(ch) {
 
 
 // 9. Character Counter
+// write a function called counter that accepts a string
+// and counts the occurrence of every character,
+// returning { 'h': 1, 'e': 1, 'l': 2, 'o': 1 } if
+// given 'hello'
 function counter(str) {
   const chars = str.split('');
   const counts = {};
@@ -161,6 +201,12 @@ function counter(str) {
 
 
 // 10. Chain Compressor
+// write a function called compressor that takes an array
+// of strings and returns an array where every string has
+// all the occurrences of the last letter from the
+// preceding string removed (the first string remains intact);
+// for example ["jack", "smacked", "dennis"]
+// turns into ["jack", "smaced", "ennis"]
 function compressor(words) {
   const result = [];
   result.push(words[0]);
