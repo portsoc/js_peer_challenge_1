@@ -51,9 +51,10 @@ function trimmer(str, n) {
 // treat the input number as a string)
 function flipper(num) {
   const str = num.toString();
-  const brk = str.split('');
-  const rev = brk.reverse();
-  const joined = rev.join('');
+  let joined = '';
+  for (let i=str.length-1; i>=0; i--) {
+    joined += str[i];
+  }
   return Number(joined);
 }
 
